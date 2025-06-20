@@ -1,0 +1,318 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Mail, Phone, MapPin, Linkedin, Github, Download, ExternalLink } from "lucide-react";
+
+const Index = () => {
+  const skills = [
+    { name: "Python", level: "Intermediate" },
+    { name: "JavaScript", level: "Beginner" },
+    { name: "HTML", level: "Intermediate" },
+    { name: "CSS", level: "Intermediate" },
+    { name: "SQL", level: "Beginner" },
+    { name: "Web Scraping", level: "Beginner" },
+    { name: "Spring Boot", level: "Beginner" },
+    { name: "VLSI Design", level: "Intermediate" }
+  ];
+
+  const projects = [
+    {
+      title: "Low Power and High-Speed Multithreshold DFF Design",
+      description: "Designed low-power, high-speed Multi-Threshold Data Flip-Flops using 18nm FinFET technology for VLSI circuits.",
+      tech: ["VLSI Design Tools", "18nm FinFET"],
+      type: "Hardware Design"
+    },
+    {
+      title: "Banking Application",
+      description: "Developed RESTful API-based banking application using Spring Boot with complete CRUD operations.",
+      tech: ["Spring Boot", "Spring Data JPA", "Postman", "Java"],
+      type: "Web Application"
+    },
+    {
+      title: "Smart Car Parking System",
+      description: "Developed a smart parking solution using sensors and automation for efficient space management.",
+      tech: ["IoT", "Sensors", "Automation"],
+      type: "IoT Project"
+    }
+  ];
+
+  const certifications = [
+    "Programming Essentials in Python – Cisco",
+    "Cloud Computing – NPTEL",
+    "Design and Analysis of VLSI Subsystems – NPTEL"
+  ];
+
+  const internships = [
+    {
+      title: "Full Stack Developer (Web & Mobile)",
+      company: "Rooman Technologies",
+      type: "Internship"
+    },
+    {
+      title: "Prompt Engineering & ChatGPT",
+      company: "ExcelR",
+      type: "Training"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="text-2xl font-bold text-gray-900">Jagadeesh Neela</div>
+            <div className="hidden md:flex space-x-8">
+              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+              <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
+              <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+              <a href="#education" className="text-gray-700 hover:text-blue-600 transition-colors">Education</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
+              <img 
+                src="/lovable-uploads/19cf8d56-299b-46dd-a5af-a3d3dcf396ec.png" 
+                alt="Jagadeesh Neela"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+              Jagadeesh Neela
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-6">
+              Aspiring Software Engineer | B.Tech ECE Student
+            </p>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+              Dedicated Electronics and Communication Engineering student with expertise in Python and Web Development, 
+              aiming to leverage technical and analytical skills in innovative technology solutions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button className="bg-blue-600 hover:bg-blue-700">
+                <Mail className="w-4 h-4 mr-2" />
+                Contact Me
+              </Button>
+              <Button variant="outline">
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p className="text-lg text-gray-700 mb-6">
+                I am a dedicated B.Tech student specializing in Electronics and Communication Engineering, 
+                currently pursuing my degree at KSRM College of Engineering with a CGPA of 8.30.
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                My passion lies in software development, particularly in Python programming and web technologies. 
+                I have hands-on experience with various projects ranging from VLSI design to full-stack applications.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center text-gray-600">
+                  <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                  Bengaluru, Karnataka
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <Phone className="w-5 h-5 mr-2 text-blue-600" />
+                  +91 63013 65568
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <Mail className="w-5 h-5 mr-2 text-blue-600" />
+                  jagadeeshnela5940@gmail.com
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-lg text-white">
+              <h3 className="text-2xl font-bold mb-4">Career Objective</h3>
+              <p className="text-lg">
+                To leverage my technical and analytical skills to contribute to innovative technology solutions 
+                as a software engineer, while continuously learning and growing in the field of technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skills.map((skill, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">{skill.name}</CardTitle>
+                  <Badge variant="outline" className="w-fit">{skill.level}</Badge>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Projects</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow h-full">
+                <CardHeader>
+                  <div className="flex justify-between items-start mb-2">
+                    <Badge variant="secondary">{project.type}</Badge>
+                    <ExternalLink className="w-4 h-4 text-gray-400" />
+                  </div>
+                  <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
+                  <CardDescription className="text-base">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Experience & Training</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {internships.map((exp, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex justify-between items-center">
+                    <CardTitle className="text-xl">{exp.title}</CardTitle>
+                    <Badge>{exp.type}</Badge>
+                  </div>
+                  <CardDescription className="text-lg font-medium text-blue-600">
+                    {exp.company}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Education & Certifications */}
+      <section id="education" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Education & Certifications</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Education */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">Education</h3>
+              <div className="space-y-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>B.Tech - Electronics and Communication Engineering</CardTitle>
+                    <CardDescription>KSRM College of Engineering</CardDescription>
+                    <div className="flex justify-between items-center mt-2">
+                      <span className="text-sm text-gray-600">2021 - 2025</span>
+                      <Badge className="bg-green-100 text-green-800">CGPA: 8.30</Badge>
+                    </div>
+                  </CardHeader>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Intermediate</CardTitle>
+                    <CardDescription>Sri Chaitanya Boys Junior College</CardDescription>
+                    <div className="flex justify-between items-center mt-2">
+                      <span className="text-sm text-gray-600">2018 - 2020</span>
+                      <Badge variant="outline">CGPA: 7.75</Badge>
+                    </div>
+                  </CardHeader>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>SSC</CardTitle>
+                    <CardDescription>Sri Chaitanya School</CardDescription>
+                    <div className="flex justify-between items-center mt-2">
+                      <span className="text-sm text-gray-600">2017 - 2018</span>
+                      <Badge variant="outline">CGPA: 8.7</Badge>
+                    </div>
+                  </CardHeader>
+                </Card>
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">Certifications</h3>
+              <div className="space-y-4">
+                {certifications.map((cert, index) => (
+                  <Card key={index}>
+                    <CardHeader>
+                      <CardTitle className="text-lg">{cert}</CardTitle>
+                    </CardHeader>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            I'm always open to discussing new opportunities and interesting projects. 
+            Feel free to reach out if you'd like to connect!
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <Button className="bg-blue-600 hover:bg-blue-700" size="lg">
+              <Mail className="w-5 h-5 mr-2" />
+              jagadeeshnela5940@gmail.com
+            </Button>
+            <Button variant="outline" size="lg">
+              <Phone className="w-5 h-5 mr-2" />
+              +91 63013 65568
+            </Button>
+            <Button variant="outline" size="lg">
+              <Linkedin className="w-5 h-5 mr-2" />
+              LinkedIn Profile
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-gray-400">
+            © 2024 Jagadeesh Neela. Built with passion and dedication.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
